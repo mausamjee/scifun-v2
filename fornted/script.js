@@ -170,4 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Add PDF download functionality
+    document.getElementById('downloadPlanBtn').addEventListener('click', function() {
+        // You can implement this using a PDF generation library like jsPDF
+        alert('PDF download functionality will be implemented soon!');
+    });
+
+    // Add navigation toggle functionality
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('active');
+    });
 });
