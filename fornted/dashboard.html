@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - SciFun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Sci<span>Fun</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                     <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li> <!-- Added this line -->
+                    <li><a href="join-now.html">Join Now</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                    <li><a href="login.html" id="navLoginDashboard" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div class="dashboard-header">
+            <div class="student-info">
+                <img src="https://via.placeholder.com/60?text=User" alt="Student Photo" id="studentPhoto">
+                <div>
+                    <h2 id="studentName" style="margin-bottom: 0;">Student Name</h2>
+                    <p id="studentClassDisplay" style="margin-top: 0; color: var(--dark-gray);">Class</p>
+                </div>
+            </div>
+            <button class="btn btn-danger" id="logoutBtn">Logout</button>
+        </div>
+
+        <h1 class="section-title" style="text-align: left; margin-bottom: 20px;">Your Progress Overview</h1>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card weekly-report">
+                <h3>Weekly Report</h3>
+                <ul>
+                    <li><strong>Chapters Done:</strong> 3/5 this week</li>
+                    <li><strong>Quiz Accuracy:</strong> 85%</li>
+                    <li><strong>Latest Test Score:</strong> 78/100 (Chapter: Magnetism)</li>
+                    <li><strong>Attendance:</strong> 100% (4/4 classes)</li>
+                </ul>
+            </div>
+
+            <div class="dashboard-card upcoming-activities">
+                <h3>Upcoming</h3>
+                <ul>
+                    <li><strong>Next Class:</strong> Tomorrow, 5:00 PM - Optics Part 2</li>
+                    <li><strong>Next Test:</strong> Friday - Full Chapter Test: EMI & AC</li>
+                    <li><strong>Homework Due:</strong> Thursday - Magnetism Problem Set</li>
+                </ul>
+            </div>
+            
+            <div class="dashboard-card teacher-message">
+                <h3>Message from Teacher</h3>
+                <p><em>"Great work on the last quiz, [Student Name]! Keep practicing the numericals for EMI. Don't hesitate to ask doubts in the next class." - Mausam</em></p>
+                <!-- This could be a dynamic note area -->
+            </div>
+        </div>
+
+        <h2 style="margin-top: 40px;">Performance Graphs</h2>
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h3>Weekly Test Scores</h3>
+                <div class="graph-placeholder" id="testScoresChart">Bar Chart: Weekly Test Scores (Chart.js/Recharts)</div>
+            </div>
+            <div class="dashboard-card">
+                <h3>Quiz Accuracy Trend</h3>
+                <div class="graph-placeholder" id="quizAccuracyChart">Line Chart: Quiz Accuracy Trend (Chart.js/Recharts)</div>
+            </div>
+            <div class="dashboard-card">
+                <h3>Chapter Completion</h3>
+                <div class="graph-placeholder" id="chapterCompletionChart">Pie Chart: Chapters Done vs Pending (Chart.js/Recharts)</div>
+            </div>
+        </div>
+    </main>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>SciFun</h4>
+                <a href="index.html" class="logo" style="color:var(--white);font-size:1.8rem;">Sci<span>Fun</span></a>
+                <p style="font-size:0.9rem; margin-top:10px;">Where Science Meets Fun! Your partner in academic excellence.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:+911234567890">📞 +91 12345 67890</a></li>
+                    <li><a href="mailto:info@scifun.example.com">✉️ info@scifun.example.com</a></li>
+                    <li><p>📍 123 SciFun Lane, Knowledge City</p></li> <!-- Use <p> if not a link -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-socials">
+                    <!-- Replace with actual links and ideally SVG icons or FontAwesome -->
+                    <a href="#" title="Facebook">FB</a>
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SciFun. All Rights Reserved. Designed with 💡</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure user is "logged in" for prototype, otherwise redirect
+        if (!localStorage.getItem('userName')) {
+            alert("Please login to view the dashboard.");
+            window.location.href = 'login.html';
+        } else {
+            document.getElementById('navLoginDashboard').textContent = 'Dashboard';
+            document.getElementById('navLoginDashboard').href = 'dashboard.html';
+        }
+        // Additional JS for fetching and rendering Chart.js graphs would go here in a real application.
+        // For now, placeholders are styled.
+    </script>
+</body>
+</html>

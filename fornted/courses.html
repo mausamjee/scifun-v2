@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - SciFun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Sci<span>Fun</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                      <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li> <!-- Added this line -->
+                    <li><a href="join-now.html">Join Now</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                    <li><a href="login.html" id="navLoginDashboard" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 class="section-title">SciFun Courses</h1>
+
+        <table class="courses-table">
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Topics</th>
+                    <th>Demo</th>
+                    <th>Fee (per month)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="course-item-wrapper" data-course="6-10">
+                    <td>6–10</td>
+                    <td>NCERT Core (Science & Maths Focus)</td>
+                    <td><a href="#" class="watch-demo-btn">[Watch Demo]</a></td>
+                    <td>₹500</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="course-details">
+                            <h4>Features:</h4>
+                            <ul>
+                                <li>Weekly Concept Tests</li>
+                                <li>Engaging Concept Videos</li>
+                                <li>Doubt Clearing Sessions</li>
+                                <li>Fun Experiments & Activities</li>
+                            </ul>
+                            <a href="join-now.html?course=6-10" class="btn btn-secondary course-join-btn" style="margin-top:10px;">Join Now</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="course-item-wrapper" data-course="11">
+                    <td>11</td>
+                    <td>Physics + Chemistry (Competitive Edge)</td>
+                    <td><a href="#" class="watch-demo-btn">[Watch Demo]</a></td>
+                    <td>₹800</td>
+                </tr>
+                 <tr>
+                    <td colspan="4">
+                        <div class="course-details">
+                            <h4>Features:</h4>
+                            <ul>
+                                <li>In-depth Topic Coverage</li>
+                                <li>Regular Mock Tests (JEE/NEET Pattern)</li>
+                                <li>Problem Solving Techniques</li>
+                                <li>Advanced Concept Videos</li>
+                            </ul>
+                            <a href="join-now.html?course=11" class="btn btn-secondary course-join-btn" style="margin-top:10px;">Join Now</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="course-item-wrapper" data-course="12">
+                    <td>12</td>
+                    <td>Boards Full Syllabus (Physics, Chemistry, Maths/Bio)</td>
+                    <td><a href="#" class="watch-demo-btn">[Watch Demo]</a></td>
+                    <td>₹800 <span class="discount-note"> (₹400 - 50% Off on Mobile Signup!)</span></td>
+                </tr>
+                 <tr>
+                    <td colspan="4">
+                        <div class="course-details">
+                            <h4>Features:</h4>
+                            <ul>
+                                <li>Complete Board Syllabus Coverage</li>
+                                <li>Previous Years Question Papers Solved</li>
+                                <li>Personalized Attention</li>
+                                <li>Revision Batches & Full Syllabus Tests</li>
+                                <li style="color: var(--danger-color); font-weight: bold;">Special 50% Discount when joining via Mobile!</li>
+                            </ul>
+                            <a href="join-now.html?course=12" class="btn btn-secondary course-join-btn" style="margin-top:10px;">Join Now</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="schedule-links" style="margin-top: 30px; text-align: center;">
+            <h3>Syllabus Completion Plans:</h3>
+            <p><a href="completion-plan.html#plan-10th" class="btn btn-primary">10th Std: View Syllabus Completion Plan</a></p>
+            <p><a href="completion-plan.html#plan-12th" class="btn btn-primary">12th Std: View Syllabus Completion Plan</a></p>
+        </div>
+    </main>
+
+   <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>SciFun</h4>
+                <a href="index.html" class="logo" style="color:var(--white);font-size:1.8rem;">Sci<span>Fun</span></a>
+                <p style="font-size:0.9rem; margin-top:10px;">Where Science Meets Fun! Your partner in academic excellence.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:+911234567890">📞 +91 12345 67890</a></li>
+                    <li><a href="mailto:info@scifun.example.com">✉️ info@scifun.example.com</a></li>
+                    <li><p>📍 123 SciFun Lane, Knowledge City</p></li> <!-- Use <p> if not a link -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-socials">
+                    <!-- Replace with actual links and ideally SVG icons or FontAwesome -->
+                    <a href="#" title="Facebook">FB</a>
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SciFun. All Rights Reserved. Designed with 💡</p>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+    <script>
+        if (localStorage.getItem('userName')) {
+            document.getElementById('navLoginDashboard').textContent = 'Dashboard';
+            document.getElementById('navLoginDashboard').href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,773 @@
+/* Global Styles - Inspired by EduTEST's clean look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2979FF; /* Brighter, modern blue */
+    --secondary-color: #00C853; /* Vibrant green */
+    --accent-color: #FFAB00; /* Softer, engaging orange */
+    --text-color: #333;
+    --text-color-light: #555;
+    --light-gray: #f7f9fc; /* Lighter background gray */
+    --medium-gray: #e0e0e0;
+    --dark-gray: #424242; /* For footer text and headings */
+    --white: #fff;
+    --danger-color: #e53935; /* Slightly softer red */
+    --success-color: #4CAF50; /* Standard success green */
+    --font-sans: 'Poppins', sans-serif;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --box-shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+    --box-shadow-md: 0 4px 15px rgba(0,0,0,0.1);
+      /* ... existing variables ... */
+    --logo-sci-color: #0D233F; /* Dark Navy Blue from image */
+    --logo-fun-orange: #F47A20; /* Orange from image */
+    --logo-fun-pink: #E73F5A;   /* Reddish-pink from image */
+    --logo-education-color: #0D233F; /* Same as SCI part */
+    /* ... rest of your variables ... */
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--white); /* Base background */
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    max-width: 1170px; /* Slightly wider for modern layouts */
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px; /* Reduced padding for wider max-width */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-gray); /* Darker, more readable headings */
+    margin-bottom: 0.8em;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.8rem; line-height: 1.2; } /* Larger H1 */
+h2 { font-size: 2.2rem; line-height: 1.3; }
+h3 { font-size: 1.5rem; line-height: 1.4; }
+
+p {
+    margin-bottom: 1.2em;
+    color: var(--text-color-light);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: none; /* Often cleaner without underline on hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm); /* Slight rounding for images */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Navigation - Inspired by EduTEST's clean navbar */
+.navbar {
+    background: var(--white);
+    color: var(--text-color); /* Text color for light background */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow-light); /* Subtle shadow */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 2rem; /* Larger logo */
+    font-weight: 700;
+    color: #333;
+}
+
+.navbar .logo span {
+    color: #f47a20
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar nav ul li {
+    margin-left: 25px; /* Increased spacing */
+}
+
+.navbar nav ul li a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-weight: 500; /* Medium weight for nav links */
+    padding: 8px 12px;
+    border-radius: var(--border-radius-md);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+/* Special styling for login/dashboard button like "Sign In" */
+.navbar nav ul li a#navLoginDashboard.login-btn,
+.navbar nav ul li a#navLoginDashboard.dashboard-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8px 18px;
+}
+.navbar nav ul li a#navLoginDashboard.login-btn:hover,
+.navbar nav ul li a#navLoginDashboard.dashboard-btn:hover {
+    background-color: #1e63e0; /* Darker primary */
+}
+
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color); /* Match new primary color */
+    font-size: 1.8rem; /* Larger toggle */
+    cursor: pointer;
+}
+
+
+/* Buttons - Modernized button styles */
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 12px 28px; /* More padding */
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.btn:hover {
+    background: #e68a00; /* Darker accent */
+    color: var(--white);
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.btn-primary {
+    background: var(--primary-color);
+}
+.btn-primary:hover {
+    background: #1e63e0; /* Darker primary */
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+}
+.btn-secondary:hover {
+    background: #00b048; /* Darker secondary */
+}
+
+.btn-danger {
+    background: var(--danger-color);
+}
+.btn-danger:hover {
+    background: #c92a21;
+}
+
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+}
+
+
+/* Hero Section - Cleaner, brighter hero */
+.hero {
+    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
+    background-color: var(--light-gray); /* Light background, can add subtle gradient or image */
+    padding: 60px 0; /* Adjusted padding */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* For potential decorative elements */
+}
+.hero-content-wrapper { /* To allow for two-column layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left; /* Align text left for two-column */
+}
+.hero-text {
+    max-width: 55%; /* Adjust as needed */
+}
+.hero-image-placeholder { /* For an illustrative graphic */
+    max-width: 40%;
+    height: 300px; /* Adjust as needed */
+    background: #e0e7ff url('https://via.placeholder.com/400x300?text=SciFun+Illustration') center center no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-lg);
+}
+
+
+.hero h1 {
+    font-size: 3.2rem; /* Larger hero title */
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); /* Use primary color for heading */
+    font-weight: 700;
+}
+
+.hero .tagline {
+    font-size: 1.4rem; /* Slightly larger tagline */
+    margin-bottom: 1.5rem;
+    color: var(--text-color-light);
+}
+
+.mobile-banner {
+    background: var(--danger-color);
+    color: var(--white);
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius-md);
+    font-size: 0.95rem;
+    /* display: none; Will be controlled by media query */
+}
+.mobile-banner p {
+    margin: 0 0 8px 0;
+    font-weight: 500;
+    color: var(--white);
+}
+
+/* General Section Styling */
+.section {
+    padding: 60px 0; /* Increased padding */
+}
+.section-bg-light { /* For alternating section backgrounds */
+    background-color: var(--light-gray);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px; /* Increased margin */
+    font-size: 2.5rem; /* Larger section titles */
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+/* Underline effect for section titles */
+.section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+/* Card Styling - Consistent card design like EduTEST */
+.card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg); /* More rounded */
+    box-shadow: var(--box-shadow-md);
+    padding: 25px; /* More padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* For equal height in grids */
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 0.95rem;
+    flex-grow: 1; /* Allows description to take space before button */
+    margin-bottom: 15px;
+}
+.card .btn {
+    margin-top: auto; /* Pushes button to bottom if card flex */
+}
+
+/* Features Section (using .card) */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    text-align: left; /* Align text left in cards */
+}
+.feature-item .icon-placeholder { /* Placeholder for icons */
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    background-color: #e0e7ff; /* Light blue bg for icon */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Courses Preview (using .card) */
+.courses-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Testimonials (using .card) */
+.testimonials-carousel {
+    /* Basic styling, actual carousel needs JS */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.testimonial-item blockquote {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+}
+.testimonial-item cite {
+    font-weight: 600;
+    color: var(--primary-color);
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Courses Page - Reimagined with cards instead of table */
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.course-item-card { /* Extends .card */
+    text-align: left;
+}
+.course-item-card .course-grade {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+.course-item-card .course-topics {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.course-item-card .course-fee {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+.course-item-card .discount-note {
+    font-size: 0.85em;
+    color: var(--danger-color);
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+.course-item-card .course-features-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.course-item-card .course-features-list li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+.course-item-card .course-features-list li::before {
+    content: '✓'; /* Checkmark icon */
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+.course-item-card .demo-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.schedule-links {
+    margin-top: 40px;
+    text-align: center;
+}
+.schedule-links h3 {
+    margin-bottom: 20px;
+}
+.schedule-links p { margin-bottom: 10px; }
+
+
+/* Why SciFun Page */
+.scifun-method ul, .case-studies ul {
+    padding-left: 20px;
+    list-style: disc; /* Revert to disc for these lists */
+}
+.scifun-method ul li, .case-studies ul li {
+    margin-bottom: 10px;
+}
+.case-studies .case-study { /* Using .card style */
+    margin-bottom: 20px;
+}
+
+/* Join Now Page Form - Modernized form */
+.form-container {
+    max-width: 650px; /* Wider form */
+    margin: 30px auto;
+    padding: 30px; /* More padding */
+    background: var(--white); /* White background for form */
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-md);
+}
+.form-group {
+    margin-bottom: 20px; /* Increased spacing */
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Spacing for label */
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px; /* More padding */
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius-md);
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(41, 121, 255, 0.2); /* Focus ring */
+    outline: none;
+}
+.discount-applied-message {
+    background-color: var(--success-color);
+    color: white;
+    padding: 12px;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* About Us Page */
+.about-mausam {
+    display: flex;
+    gap: 30px; /* Increased gap */
+    align-items: center; /* Center align items */
+    margin-bottom: 40px;
+}
+.about-mausam img {
+    width: 180px; /* Larger image */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow-md);
+}
+.timeline-growth { margin-bottom: 40px; }
+.timeline-item {
+    margin-bottom: 20px;
+    padding-left: 30px; /* More padding */
+    position: relative;
+    border-left: 3px solid var(--primary-color);
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px; /* Adjust for thicker border */
+    top: 5px;
+    width: 15px; /* Larger dot */
+    height: 15px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 2px solid var(--white); /* White border around dot */
+}
+.timeline-item strong {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.contact-socials a {
+    margin-right: 15px;
+    font-size: 1.8rem; /* Larger social icons */
+    color: var(--primary-color);
+}
+.contact-socials a:hover { color: var(--accent-color); }
+
+
+/* Login Page */
+.login-container {
+    max-width: 450px; /* Wider login box */
+    margin: 60px auto;
+    padding: 40px; /* More padding */
+    text-align: center;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-md);
+}
+.login-container h2 { font-size: 1.8rem; }
+.google-login-btn {
+    background: #DB4437;
+    color: white;
+    padding: 12px 25px;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px; /* Increased gap */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.google-login-btn img { width: 22px; height: 22px; }
+.google-login-btn:hover {
+    background: #c33225;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Student Dashboard - Using .card for dashboard items */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+.student-info { display: flex; align-items: center; gap: 20px; }
+.student-info img {
+    width: 70px; /* Larger photo */
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.student-info h2 { margin-bottom: 2px; font-size: 1.6rem;}
+.student-info p { margin-top: 0; color: var(--text-color-light); font-size: 1rem;}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Increased gap */
+}
+/* .dashboard-card is now .card from global styles */
+.dashboard-card h3 { /* Specific to dashboard card titles */
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.dashboard-card ul li { margin-bottom: 10px; font-size: 0.95rem; }
+.dashboard-card ul li strong { font-weight: 500; }
+.dashboard-card .graph-placeholder {
+    width: 100%;
+    height: 220px; /* Taller placeholder */
+    background: #e9ecef url('https://via.placeholder.com/300x220?text=Chart+Loading...') center center no-repeat;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-gray);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Completion Plan Page */
+.plan-section { /* Using .card style */
+    margin-bottom: 30px;
+}
+.plan-section h3 {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+}
+.plan-section ul li {
+    padding: 10px 5px;
+    border-bottom: 1px dashed var(--medium-gray);
+    font-size: 0.95rem;
+}
+.plan-section ul li:last-child { border-bottom: none; }
+.plan-section ul li strong { color: var(--accent-color); font-weight: 600; }
+
+
+/* Footer - Inspired by EduTEST footer */
+footer {
+    background: var(--dark-gray); /* Dark background for footer */
+    color: #adb5bd; /* Lighter text for dark bg */
+    padding: 50px 0 30px; /* More padding */
+    margin-top: 60px;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.footer-column h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li a {
+    color: #adb5bd;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.footer-column ul li a:hover {
+    color: var(--white);
+    padding-left: 5px; /* Slight indent on hover */
+}
+.footer-socials a {
+    color: #adb5bd;
+    font-size: 1.5rem; /* Social icon size */
+    margin-right: 15px;
+}
+.footer-socials a:hover { color: var(--white); }
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #495057; /* Separator line */
+    font-size: 0.9rem;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) { /* Tablet and below */
+    .hero-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero-image-placeholder {
+        max-width: 100%;
+    }
+    .hero-image-placeholder { margin-top: 30px; }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        margin-top: 10px; /* Space between logo and nav items */
+    }
+    .navbar nav.active {
+        max-height: 500px; /* Adjust as needed */
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar nav ul li {
+        margin: 10px 0;
+        text-align: left; /* Align text left in mobile nav */
+    }
+    .navbar nav ul li a,
+    .navbar nav ul li a#navLoginDashboard.login-btn, /* Ensure mobile styles */
+    .navbar nav ul li a#navLoginDashboard.dashboard-btn {
+        display: block; /* Make links full width */
+        padding: 12px 15px;
+    }
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 20px; /* Adjust positioning */
+        right: 20px;
+    }
+
+    .hero h1 { font-size: 2.5rem; }
+    .hero .tagline { font-size: 1.2rem; }
+    .hero { padding: 40px 0; }
+
+    .mobile-banner { /* Ensure it's displayed on mobile */
+        display: block;
+    }
+
+    .section-title { font-size: 2rem; margin-bottom: 30px;}
+    .section { padding: 40px 0; }
+
+    .about-mausam {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .dashboard-grid, .features-grid, .courses-preview-grid, .courses-list, .testimonials-carousel {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-column ul {
+        padding-left: 0;
+    }
+    .footer-socials {
+        margin-top: 10px;
+    }
+
+
+}
+

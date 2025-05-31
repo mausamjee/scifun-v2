@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now - SciFun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Sci<span>Fun</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                   <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li> <!-- Added this line -->
+                    <li><a href="join-now.html">Join Now</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                    <li><a href="login.html" id="navLoginDashboard" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 class="section-title">Join SciFun Today!</h1>
+        <p style="text-align:center;">Fill out the form below to start your fun-filled science journey.</p>
+
+        <div class="form-container">
+            <div id="discountMessage" class="discount-applied-message" style="display: none;">
+                🌟 50% Discount Applied for 12th Std Mobile Signup!
+            </div>
+            <form id="joinNowForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentClass">Class:</label>
+                    <select id="studentClass" name="studentClass" required>
+                        <option value="">-- Select Class --</option>
+                        <option value="6">Grade 6</option>
+                        <option value="7">Grade 7</option>
+                        <option value="8">Grade 8</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number (if different):</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{10}" title="Please enter a 10-digit WhatsApp number">
+                </div>
+                <div class="form-group">
+                    <label for="timing">Preferred Timing:</label>
+                    <select id="timing" name="timing" required>
+                        <option value="">-- Select Timing --</option>
+                        <option value="morning">Morning (8 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+                        <option value="evening">Evening (5 PM - 8 PM)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm & Start Learning</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>SciFun</h4>
+                <a href="index.html" class="logo" style="color:var(--white);font-size:1.8rem;">Sci<span>Fun</span></a>
+                <p style="font-size:0.9rem; margin-top:10px;">Where Science Meets Fun! Your partner in academic excellence.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:+911234567890">📞 +91 12345 67890</a></li>
+                    <li><a href="mailto:info@scifun.example.com">✉️ info@scifun.example.com</a></li>
+                    <li><p>📍 123 SciFun Lane, Knowledge City</p></li> <!-- Use <p> if not a link -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-socials">
+                    <!-- Replace with actual links and ideally SVG icons or FontAwesome -->
+                    <a href="#" title="Facebook">FB</a>
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SciFun. All Rights Reserved. Designed with 💡</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (localStorage.getItem('userName')) {
+            document.getElementById('navLoginDashboard').textContent = 'Dashboard';
+            document.getElementById('navLoginDashboard').href = 'dashboard.html';
+        }
+
+        // Check for query params to pre-select course and show discount
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseParam = urlParams.get('course');
+        const discountParam = urlParams.get('discount'); // For mobile banner click
+        const gradeParam = urlParams.get('grade'); // For mobile banner click
+
+        const classDropdownJoin = document.getElementById('studentClass');
+        const discountMessageJoin = document.getElementById('discountMessage');
+
+        if (courseParam) {
+            if (courseParam === '12') {
+                classDropdownJoin.value = '12';
+            } else if (courseParam === '11') {
+                classDropdownJoin.value = '11';
+            } // Add other grades if needed
+        }
+        
+        // From mobile banner click
+        if (gradeParam === '12' && discountParam === 'true'){
+            classDropdownJoin.value = '12';
+             // Simulate mobile detection (since direct JS mobile detection can be tricky for this prototype logic)
+            const isMobileForDiscount = true; // Assume it's mobile if this param is present
+            if (isMobileForDiscount) {
+                 discountMessageJoin.style.display = 'block';
+            }
+        }
+
+
+        // Re-trigger discount check on page load if 12th is selected
+        const isMobile = window.innerWidth <= 768;
+        if (classDropdownJoin.value === '12' && (isMobile || discountParam === 'true')) {
+            discountMessageJoin.style.display = 'block';
+        }
+
+    </script>
+</body>
+</html>

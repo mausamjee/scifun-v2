@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Completion Plan - SciFun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Sci<span>Fun</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                      <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li> <!-- Added this line -->
+                    <li><a href="join-now.html">Join Now</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                    <li><a href="login.html" id="navLoginDashboard" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 class="section-title">Syllabus Completion Plan (2025)</h1>
+        <p style="text-align:center;">Our structured plans to ensure timely syllabus completion for board exams.</p>
+
+        <section class="plan-section" id="plan-12th">
+            <h3>12th Std Plan (Science Stream - Physics & Chemistry Focus)</h3>
+            <ul>
+                <li><strong>📅 May:</strong> Electrostatics, Current Electricity</li>
+                <li><strong>📅 June:</strong> Magnetism, Electromagnetic Induction (EMI)</li>
+                <li><strong>📅 July:</strong> Alternating Current (AC), Optics (Ray & Wave)</li>
+                <li><strong>📅 August:</strong> Modern Physics (Dual Nature, Atoms, Nuclei), Semiconductor Electronics + Numericals Practice</li>
+                <li><strong>📅 September:</strong> Full Syllabus Revision + Mock Tests Series 1</li>
+                <li><strong>📅 October:</strong> Advanced Problem Solving, Doubt Clearing, Mock Test Series 2</li>
+                <li><strong>📅 November:</strong> Focused Revision on Weak Areas, Previous Year Papers</li>
+                <li><strong>📅 December:</strong> Final Mock Tests & Board Exam Strategies</li>
+            </ul>
+        </section>
+
+        <section class="plan-section" id="plan-10th">
+            <h3>10th Std Plan (Science & Mathematics)</h3>
+            <ul>
+                <li><strong>📅 May:</strong> Chemical Reactions & Equations (Science), Real Numbers (Maths)</li>
+                <li><strong>📅 June:</strong> Acids, Bases & Salts (Science), Polynomials (Maths)</li>
+                <li><strong>📅 July:</strong> Life Processes (Biology), Pair of Linear Equations in Two Variables (Maths), Metals and Non-metals (Science)</li>
+                <li><strong>📅 August:</strong> Light - Reflection & Refraction (Physics), Triangles (Maths), Carbon and its Compounds (Science)</li>
+                <li><strong>📅 September:</strong> Human Eye & Colourful World (Physics), Coordinate Geometry (Maths), Control and Coordination (Biology)</li>
+                <li><strong>📅 October:</strong> Electricity (Physics), Introduction to Trigonometry (Maths), How do Organisms Reproduce? (Biology)</li>
+                <li><strong>📅 November:</strong> Magnetic Effects of Electric Current (Physics), Some Applications of Trigonometry (Maths), Heredity and Evolution (Biology)</li>
+                <li><strong>📅 December:</strong> Our Environment (Biology), Circles & Areas Related to Circles (Maths), Full Revision & Pre-Board Mock Tests Series 1</li>
+                <li><strong>📅 January:</strong> Surface Areas and Volumes, Statistics, Probability (Maths), Revision Series 2 & Doubt Clearing</li>
+            </ul>
+        </section>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn btn-primary" id="downloadPlanBtn">📄 Download Full Plan PDF</button>
+            <p style="font-size:0.9em; margin-top:10px;">(Note: This is a sample plan. Detailed, subject-specific plans will be provided upon enrollment.)</p>
+        </div>
+    </main>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>SciFun</h4>
+                <a href="index.html" class="logo" style="color:var(--white);font-size:1.8rem;">Sci<span>Fun</span></a>
+                <p style="font-size:0.9rem; margin-top:10px;">Where Science Meets Fun! Your partner in academic excellence.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="why-scifun.html">Why SciFun?</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="completion-plan.html">Completion Plan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:+911234567890">📞 +91 12345 67890</a></li>
+                    <li><a href="mailto:info@scifun.example.com">✉️ info@scifun.example.com</a></li>
+                    <li><p>📍 123 SciFun Lane, Knowledge City</p></li> <!-- Use <p> if not a link -->
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-socials">
+                    <!-- Replace with actual links and ideally SVG icons or FontAwesome -->
+                    <a href="#" title="Facebook">FB</a>
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="YouTube">YT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SciFun. All Rights Reserved. Designed with 💡</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (localStorage.getItem('userName')) {
+            document.getElementById('navLoginDashboard').textContent = 'Dashboard';
+            document.getElementById('navLoginDashboard').href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
